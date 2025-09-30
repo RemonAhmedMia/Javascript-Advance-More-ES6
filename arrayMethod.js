@@ -19,7 +19,6 @@ products.forEach(product=>{
     if (product.color === 'gold') {
         console.log(product);
     } else{
-        console.log(product);
-        
+        console.log();
     }
 })
