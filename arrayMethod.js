@@ -22,3 +22,44 @@ products.forEach(product=>{
         console.log();
     }
 })
+
+
+// Find============
+
+// find() কি?
+
+// find() হলো Array method।
+
+// এটা অ্যারের প্রতিটি element চেক করে।
+
+// প্রথম যে element শর্ত (condition) মেনে নেয়, শুধু সেটা return করে।
+
+// যদি কিছুই match না পায় → undefined return করে।
+
+const songkha = [5, 10, 15, 20];
+
+const firstGreaterThan10 = songkha.find(num => num > 10);
+
+console.log(firstGreaterThan10); 
+// Output: 15
+// এখানে > 10 শর্তে প্রথম match হলো 15, তাই শুধু সেটাই পাওয়া গেছে।
+
+const product = products.find(p=>p.id===3);
+console.log(product);
+
+// find() → প্রথম matching element return করে।
+
+// না পেলে undefined দেয়।
+
+// filter() এর মতো হলেও, filter() সবগুলো match দেয়, find() শুধু প্রথমটা দেয়।
+
+// Parameters: (element, index, array)
+
+const mal = [
+  { id: 1, name: "Mobile" },
+  { id: 2, name: "Laptop" },
+  { id: 3, name: "Tablet" }
+];
+
+const newP = mal.filter(p => p.id != 2);
+console.log(newP);
