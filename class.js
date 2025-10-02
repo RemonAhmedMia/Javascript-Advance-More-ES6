@@ -94,3 +94,29 @@ chatro2.showInfo(); // Name: Karim, Age: 22
 
 // যখন chatro1.showInfo() চালানো হলো → তখন this মানে হলো chatro1
 // যখন chatro2.showInfo() চালানো হলো → তখন this মানে হলো chatro2
+
+// ============================
+class BankAccount {
+  constructor(owner, balance) {
+    this.owner = owner;   // this মানে হলো যে object বানাচ্ছি
+    this.balance = balance;
+  }
+
+  deposit(amount) {
+    this.balance += amount;
+    console.log(`${this.owner} জমা দিলো ${amount}, এখন ব্যালেন্স: ${this.balance}`);
+  }
+}
+
+const acc1 = new BankAccount("Rahim", 5000);
+const acc2 = new BankAccount("Karim", 2000);
+
+acc1.deposit(1000); // Rahim জমা দিলো 1000, এখন ব্যালেন্স: 6000
+acc2.deposit(500);  // Karim জমা দিলো 500, এখন ব্যালেন্স: 2500
+
+// += হলো শর্টহ্যান্ড অপারেটর (short form)।
+// এর মানে হচ্ছে → আগের মানের সাথে নতুন মান যোগ করে আবার সেট করো।
+
+let x = 10;
+x += 5;   // x = x + 5
+console.log(x); // 15
