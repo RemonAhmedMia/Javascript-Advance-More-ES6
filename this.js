@@ -25,3 +25,39 @@ solim.sleep()
 // Security এবং integrity বজায় রাখা।
 // Object-এর behavior ঠিক রাখা।
 // **rivate property করার জন্য # ব্যবহার করা হয়।
+
+class Persons {
+    #age;  // private property
+
+    constructor(name, age) {
+        this.name = name; 
+        this.#age = age; 
+    }
+
+    // getter
+    getAge() {
+        return this.#age;
+    }
+
+    // setter
+    setAge(newAge) {
+        if (newAge > 0) {
+            this.#age = newAge;
+        } else {
+            console.log("Age must be positive!");
+        }
+    }
+
+    showInfo() {
+        console.log(`Name: ${this.name}, Age: ${this.#age}`);
+    }
+}
+
+const korim = new Persons("korim", 45);
+korim.showInfo(); // Name: korim, Age: 45
+
+korim.setAge(50); 
+korim.showInfo(); // Name: korim, Age: 50
+
+korim.setAge(-10); // Age must be positive!
+korim.showInfo(); // Name: korim, Age: 50
