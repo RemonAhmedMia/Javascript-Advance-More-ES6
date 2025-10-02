@@ -61,3 +61,21 @@ korim.showInfo(); // Name: korim, Age: 50
 
 korim.setAge(-10); // Age must be positive!
 korim.showInfo(); // Name: korim, Age: 50
+
+
+// Key Points:
+// Feature	Explanation
+// #property	private property, বাইরে access করা যাবে না
+// Getter method	private property পড়ার জন্য
+// Setter method	private property update করার জন্য, validation সহ
+
+
+// সহজভাবে মনে রাখো:
+
+// Encapsulation = data hiding + controlled access
+
+// Public property = কেউ সরাসরি change করতে পারে
+
+// Private property = method দিয়ে নিয়ন্ত্রণ করতে হয়
+
+// ভালো practice: always hide sensitive data ** Banking system er khetre emn hoi
